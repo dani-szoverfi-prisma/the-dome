@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "reservation": "Reservation"
+  },
+  "home": {
+    "heroTagline": "An exceptional gastronomic experience",
+    "heroSubtitle": "Fine dining in the heart of Târgu Mureș",
+    "heroCta": "Reserve a table",
+    "introHeading": "Welcome to The Dome",
+    "introCopy": "The Dome invites you into a world of culinary refinement, where every dish is a work of art. Our elegant atmosphere, combined with our creative cuisine, creates an unforgettable experience.",
+    "menuPreviewHeading": "Our cuisine",
+    "menuPreviewCta": "View full menu",
+    "wineHeading": "Wine Cellar",
+    "wineCopy": "A carefully curated selection of wines from the most renowned vineyards, perfectly complementing each dish.",
+    "wineCta": "Discover the wines",
+    "galleryHeading": "Atmosphere",
+    "galleryCta": "View gallery",
+    "reservationHeading": "Reserve a table"
+  },
+  "menu": {
+    "heading": "Our Menu",
+    "food": "Food",
+    "drinks": "Drinks",
+    "wine": "Wine List",
+    "downloadPdf": "Download menu PDF",
+    "price": "Price"
+  },
+  "gallery": {
+    "heading": "Photo Gallery",
+    "interior": "Interior",
+    "terrace": "Terrace",
+    "vinoteca": "Wine Cellar"
+  },
+  "contact": {
+    "heading": "Contact",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Opening Hours",
+    "hoursValue": "Monday–Saturday: 12:00–23:00\nSunday: 12:00–22:00",
+    "formHeading": "Send a message",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "formSubmit": "Send"
+  },
+  "reservation": {
+    "heading": "Table Reservation",
+    "subheading": "Reserve a table at The Dome and enjoy a unique culinary experience.",
+    "formName": "Full name",
+    "formPhone": "Phone",
+    "formEmail": "Email",
+    "formDate": "Date",
+    "formTime": "Time",
+    "formGuests": "Number of guests",
+    "formNotes": "Special requests",
+    "formSubmit": "Confirm reservation",
+    "successMessage": "Your reservation has been sent. We will contact you shortly to confirm.",
+    "errorMessage": "An error occurred. Please contact us directly by phone."
+  },
+  "footer": {
+    "tagline": "Fine dining in the heart of Târgu Mureș",
+    "address": "Example St. 1, Târgu Mureș",
+    "phone": "+40 265 000 000",
+    "email": "contact@thedome.ro",
+    "rights": "All rights reserved"
+  }
+}

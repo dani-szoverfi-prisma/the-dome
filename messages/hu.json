@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Főoldal",
+    "menu": "Étlap",
+    "gallery": "Galéria",
+    "contact": "Kapcsolat",
+    "reservation": "Foglalás"
+  },
+  "home": {
+    "heroTagline": "Kivételes gasztronómiai élmény",
+    "heroSubtitle": "Fine dining Marosvásárhely szívében",
+    "heroCta": "Asztalt foglalok",
+    "introHeading": "Üdvözöljük a The Dome-ban",
+    "introCopy": "A The Dome meghívja Önt a gasztronómiai finomság világába, ahol minden fogás egy műalkotás. Elegáns hangulatunk és kreatív konyhánk felejthetetlen élményt nyújt.",
+    "menuPreviewHeading": "Konyhánk",
+    "menuPreviewCta": "Teljes étlap megtekintése",
+    "wineHeading": "Borkészlet",
+    "wineCopy": "Gondosan válogatott borok a leghíresebb borvidékekről, tökéletesen kiegészítve minden fogást.",
+    "wineCta": "Fedezze fel borainkat",
+    "galleryHeading": "Hangulat",
+    "galleryCta": "Galéria megtekintése",
+    "reservationHeading": "Asztalt foglalok"
+  },
+  "menu": {
+    "heading": "Étlapunk",
+    "food": "Ételek",
+    "drinks": "Italok",
+    "wine": "Borlap",
+    "downloadPdf": "Étlap letöltése PDF-ben",
+    "price": "Ár"
+  },
+  "gallery": {
+    "heading": "Fotógaléria",
+    "interior": "Belső tér",
+    "terrace": "Terasz",
+    "vinoteca": "Borkészlet"
+  },
+  "contact": {
+    "heading": "Kapcsolat",
+    "address": "Cím",
+    "phone": "Telefon",
+    "email": "Email",
+    "hours": "Nyitvatartás",
+    "hoursValue": "Hétfő–Szombat: 12:00–23:00\nVasárnap: 12:00–22:00",
+    "formHeading": "Üzenet küldése",
+    "formName": "Név",
+    "formEmail": "Email",
+    "formMessage": "Üzenet",
+    "formSubmit": "Küldés"
+  },
+  "reservation": {
+    "heading": "Asztalfoglalás",
+    "subheading": "Foglaljon asztalt a The Dome-ban, és élvezze az egyedülálló gasztronómiai élményt.",
+    "formName": "Teljes név",
+    "formPhone": "Telefon",
+    "formEmail": "Email",
+    "formDate": "Dátum",
+    "formTime": "Időpont",
+    "formGuests": "Vendégek száma",
+    "formNotes": "Különleges kérések",
+    "formSubmit": "Foglalás megerősítése",
+    "successMessage": "Foglalása elküldve. Hamarosan felvesszük Önnel a kapcsolatot a megerősítéshez.",
+    "errorMessage": "Hiba történt. Kérjük, hívjon minket közvetlenül telefonon."
+  },
+  "footer": {
+    "tagline": "Fine dining Marosvásárhely szívében",
+    "address": "Példa u. 1., Marosvásárhely",
+    "phone": "+40 265 000 000",
+    "email": "contact@thedome.ro",
+    "rights": "Minden jog fenntartva"
+  }
+}

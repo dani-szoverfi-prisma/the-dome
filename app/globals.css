@@ -1,26 +1,492 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens ─────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--bg-primary: #0c0c0c;
+	--bg-secondary: #131313;
+	--bg-card: #161616;
+	--text-primary: #f5f0e8;
+	--text-muted: #b4b4b4;
+	/* --accent-copper: #c9a84c; */
+	--accent-copper: #a8884a;
+	--accent-gold: #a8884a;
+	--accent-deep: #6e5a2e;
+	--accent-olive: #111111;
+	--accent-border: #6e6e6e;
 }
 
+/* ─── Tailwind v4 theme extension ───────────────────────────── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-bg-primary: var(--bg-primary);
+	--color-bg-secondary: var(--bg-secondary);
+	--color-text-primary: var(--text-primary);
+	--color-text-muted: var(--text-muted);
+	--color-copper: var(--accent-copper);
+	--color-gold: var(--accent-gold);
+	--color-deep: var(--accent-deep);
+	--color-olive: var(--accent-olive);
+	--color-border: var(--accent-border);
+	--font-serif: var(--font-cormorant);
+	--font-sans: var(--font-jost);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base ───────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	font-family: var(--font-jost), system-ui, sans-serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--font-cormorant), Georgia, serif;
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+/* ─── Fluid Typography ───────────────────────────────────────── */
+h1 {
+	font-size: clamp(3rem, 6vw, 5rem);
+}
+
+h2 {
+	font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+	font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+p {
+	font-size: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+	line-height: 1.7;
+}
+
+/* ─── Accessibility: Focus states ───────────────────────────── */
+:focus-visible {
+	outline: 2px solid var(--accent-gold);
+	outline-offset: 3px;
+}
+
+/* ─── Cursor on all interactives ────────────────────────────── */
+button,
+[role="button"],
+a,
+label,
+select,
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"] {
+	cursor: pointer;
+}
+
+/* ─── Button component (CSS hover — works on touch + mouse) ─── */
+.btn {
+	display: inline-block;
+	background: transparent;
+	border: 1px solid;
+	padding: 0.85rem 2.25rem;
+	font-size: 0.7rem;
+	font-family: var(--font-jost), system-ui, sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+	white-space: nowrap;
+	min-height: 44px; /* touch target */
+	min-width: 44px;
+}
+
+.btn-copper {
+	border-color: var(--accent-copper);
+	color: #ffffff;
+}
+
+.btn-copper:hover {
+	background-color: var(--accent-copper);
+	color: #ffffff;
+}
+
+.btn-gold {
+	border-color: var(--accent-gold);
+	color: #ffffff;
+}
+
+.btn-gold:hover {
+	background-color: var(--accent-gold);
+	color: var(--bg-primary);
+}
+
+.btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* ─── Nav link hover (CSS — works on touch + mouse) ─────────── */
+.nav-link {
+	color: var(--text-muted);
+	text-decoration: none;
+	transition: color 0.3s ease;
+	cursor: pointer;
+}
+
+.nav-link:hover {
+	color: var(--text-primary);
+}
+
+.nav-link-overlay {
+	color: var(--text-primary);
+	text-decoration: none;
+	transition: color 0.3s ease;
+	cursor: pointer;
+}
+
+.nav-link-overlay:hover {
+	color: var(--accent-gold);
+}
+
+/* ─── Scroll reveal animation ────────────────────────────────── */
+.reveal {
+	opacity: 0;
+	transform: translateY(20px);
+	transition:
+		opacity 0.6s ease-out,
+		transform 0.6s ease-out;
+}
+
+.reveal.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+	.reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+
+	.img-zoom img {
+		transition: none;
+	}
+
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+/* ─── Image hover zoom ───────────────────────────────────────── */
+.img-zoom {
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.img-zoom img {
+	transition: transform 0.6s ease-out;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.img-zoom:hover img {
+	transform: scale(1.05);
+}
+
+/* ─── Section decorative lines ───────────────────────────────── */
+@keyframes raindrop {
+	/* falls 0–70%, then invisible pause for the remaining 30% */
+	0% {
+		transform: translateY(-90px);
+		opacity: 0;
+	}
+	6% {
+		opacity: 0.85;
+	}
+	65% {
+		opacity: 0.5;
+	}
+	70% {
+		transform: translateY(4000px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(4000px);
+		opacity: 0;
+	}
+}
+
+/* Per-section vertical rules */
+.sec-line-l,
+.sec-line-r,
+.sec-line-c {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 1px;
+	background: linear-gradient(
+		to bottom,
+		transparent 0%,
+		rgba(200, 200, 200, 0.06) 15%,
+		rgba(200, 200, 200, 0.06) 85%,
+		transparent 100%
+	);
+}
+
+.sec-line-l {
+	left: 33%;
+}
+.sec-line-r {
+	left: 67%;
+}
+.sec-line-c {
+	display: none;
+	left: 50%;
+}
+
+.deco-drop {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1px;
+	height: 80px;
+	background: linear-gradient(
+		to bottom,
+		transparent,
+		rgba(230, 230, 230, 0.6),
+		transparent
+	);
+	opacity: 0;
+	animation: raindrop 26s ease-in infinite;
+}
+
+@media (max-width: 768px) {
+	.sec-line-l,
+	.sec-line-r {
+		display: none;
+	}
+	.sec-line-c {
+		display: block;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.deco-drop {
+		display: none;
+	}
+}
+
+/* ─── Section spacing ────────────────────────────────────────── */
+.section {
+	padding-block: clamp(80px, 10vw, 160px);
+}
+
+.container {
+	max-width: 1440px;
+	margin-inline: auto;
+	padding-inline: clamp(1.5rem, 5vw, 5rem);
+}
+
+/* ─── Divider ────────────────────────────────────────────────── */
+.divider {
+	border: none;
+	border-top: 1px solid var(--accent-border);
+}
+
+/* ─── Navigation header layout ──────────────────────────────── */
+.nav-header {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	width: 100%;
+}
+
+.nav-contact {
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+}
+
+.nav-logo-center {
+	justify-self: center;
+}
+
+.nav-menu-right {
+	justify-self: end;
+}
+
+@media (max-width: 768px) {
+	.nav-header {
+		grid-template-columns: auto 1fr auto;
+	}
+
+	.nav-contact {
+		display: none;
+	}
+
+	.nav-logo-center {
+		justify-self: start;
+	}
+}
+
+/* ─── Tab button (menu/gallery filter) ──────────────────────── */
+.tab-btn {
+	background: none;
+	border: none;
+	border-bottom: 2px solid transparent;
+	padding: 1.25rem 2rem;
+	cursor: pointer;
+	font-size: 0.7rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+	font-family: var(--font-jost), system-ui, sans-serif;
+	transition:
+		color 0.3s ease,
+		border-color 0.3s ease;
+	white-space: nowrap;
+	min-height: 44px;
+}
+
+.tab-btn:hover {
+	color: var(--text-primary);
+}
+
+.tab-btn[aria-selected="true"],
+.tab-btn.active {
+	color: var(--text-primary);
+	border-bottom-color: var(--accent-copper);
+}
+
+/* ─── Contact page column order (form first in DOM = top on mobile, right on desktop) ── */
+.contact-form-col {
+	order: 2;
+}
+.contact-data-col {
+	order: 1;
+}
+@media (max-width: 768px) {
+	.contact-form-col {
+		order: 1;
+	}
+	.contact-data-col {
+		order: 2;
+	}
+}
+
+/* ─── Form input underline ───────────────────────────────────── */
+.form-input {
+	width: 100%;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid var(--accent-border);
+	padding: 0.75rem 0;
+	color: var(--text-primary);
+	font-size: 0.9rem;
+	font-family: var(--font-jost), system-ui, sans-serif;
+	font-weight: 300;
+	outline: none;
+	transition: border-color 0.3s ease;
+	min-height: 44px;
+}
+
+.form-input:focus {
+	border-bottom-color: var(--accent-copper);
+}
+
+.form-label {
+	display: block;
+	font-size: 0.65rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+	margin-bottom: 0.25rem;
+}
+
+/* ─── Page loader ────────────────────────────────────────────── */
+.page-loader {
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	background-color: var(--bg-primary);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-loader__eyebrow {
+	font-size: 0.65rem;
+	letter-spacing: 0.35em;
+	text-transform: uppercase;
+	color: var(--accent-gold);
+	margin: 0 0 1.25rem;
+	opacity: 0;
+	transform: translateY(8px);
+	animation: loaderFadeUp 0.7s ease 0.35s forwards;
+}
+
+.page-loader__title {
+	font-family: var(--font-cormorant), Georgia, serif;
+	font-size: clamp(3rem, 8vw, 6.5rem);
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #ffffff;
+	line-height: 1;
+	opacity: 0;
+	transform: translateY(18px);
+	animation: loaderFadeUp 0.9s ease 0.1s forwards;
+}
+
+.page-loader__line {
+	margin-top: 1.75rem;
+	height: 1px;
+	width: 0;
+	background-color: var(--accent-gold);
+	opacity: 0.5;
+	animation: loaderLine 1s ease 1s forwards;
+}
+
+@keyframes loaderFadeUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes loaderLine {
+	to {
+		width: 80px;
+	}
+}
+
+.page-loader--exit {
+	animation: loaderCurtainUp 0.9s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes loaderCurtainUp {
+	to {
+		transform: translateY(-100%);
+	}
 }
