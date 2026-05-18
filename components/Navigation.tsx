@@ -12,8 +12,8 @@ const locales = [
 ];
 
 /* Swap with real contact details */
-const PHONE = "+40 265 000 000";
-const ADDRESS = "Str. Exemplu nr. 1, Târgu Mureș";
+const PHONE = "+40 361 415 162";
+const ADDRESS = "Strada 1 Decembrie 1918 5, Satu Mare";
 
 export default function Navigation() {
 	const [scrolled, setScrolled] = useState(false);

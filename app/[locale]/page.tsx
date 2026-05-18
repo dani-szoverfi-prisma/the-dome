@@ -17,10 +17,10 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale, namespace: "home" });
 
 	return {
-		title: "The Dome — Fine Dining Târgu Mureș",
+		title: "The Dome — Fine Dining Satu Mare",
 		description: t("heroSubtitle"),
 		openGraph: {
-			title: "The Dome — Fine Dining Târgu Mureș",
+			title: "The Dome — Fine Dining Satu Mare",
 			description: t("heroSubtitle"),
 		},
 	};
@@ -125,7 +125,7 @@ export default async function HomePage({
 							color: "var(--accent-primary)",
 							marginBottom: "1.5rem",
 						}}>
-						Fine Dining · Târgu Mureș
+						Fine Dining · Satu Mare
 					</p>
 					{/* <h1
 						style={{
@@ -200,7 +200,7 @@ export default async function HomePage({
 									color: "var(--accent-gold)",
 									marginBottom: "1.25rem",
 								}}>
-								Restaurantul nostru
+								{t("introEyebrow")}
 							</p>
 							<h2
 								style={{
@@ -268,7 +268,7 @@ export default async function HomePage({
 								textAlign: "center",
 								marginBottom: "0.75rem",
 							}}>
-							Selecție
+							{t("menuPreviewEyebrow")}
 						</p>
 						<h2
 							style={{
@@ -386,7 +386,7 @@ export default async function HomePage({
 								color: "var(--accent-gold)",
 								marginBottom: "1rem",
 							}}>
-							Selecție premium
+							{t("wineEyebrow")}
 						</p>
 						<h2
 							style={{
@@ -427,7 +427,7 @@ export default async function HomePage({
 					<GalleryStrip
 						items={galleryImages}
 						locale={locale}
-						eyebrow="Atmosferă"
+						eyebrow={t("galleryEyebrow")}
 						heading={t("galleryHeading")}
 						ctaLabel={t("galleryCta")}
 					/>
@@ -445,16 +445,16 @@ export default async function HomePage({
 						"@context": "https://schema.org",
 						"@type": "Restaurant",
 						name: "The Dome",
-						description: "Fine dining restaurant in Târgu Mureș, Romania",
+						description: "Fine dining restaurant in Satu Mare, Romania",
 						address: {
 							"@type": "PostalAddress",
-							streetAddress: "Str. Exemplu nr. 1",
-							addressLocality: "Târgu Mureș",
+							streetAddress: "Strada 1 Decembrie 1918 5",
+							addressLocality: "Satu Mare",
 							addressCountry: "RO",
 						},
-						telephone: "+40265000000",
+						telephone: "+40361415162",
 						servesCuisine: "Fine Dining",
-						openingHours: ["Mo-Sa 12:00-23:00", "Su 12:00-22:00"],
+						openingHours: ["Mo-Su 12:00-23:00"],
 						url: "https://thedome.ro",
 					}),
 				}}

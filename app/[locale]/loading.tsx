@@ -40,7 +40,7 @@ export default function Loading() {
 					transform: visible ? "translateY(0)" : "translateY(8px)",
 					transition: "opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s",
 				}}>
-				Fine Dining · Târgu Mureș
+				Fine Dining · Satu Mare
 			</p>
 			<div
 				style={{

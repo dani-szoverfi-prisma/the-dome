@@ -8,7 +8,7 @@
   },
   "home": {
     "heroTagline": "Ein außergewöhnliches gastronomisches Erlebnis",
-    "heroSubtitle": "Fine Dining im Herzen von Târgu Mureș",
+    "heroSubtitle": "Fine Dining im Herzen von Satu Mare",
     "heroCta": "Tisch reservieren",
     "introHeading": "Willkommen im The Dome",
     "introCopy": "The Dome lädt Sie in eine Welt der kulinarischen Verfeinerung ein, wo jedes Gericht ein Kunstwerk ist. Unsere elegante Atmosphäre, kombiniert mit unserer kreativen Küche, schafft ein unvergessliches Erlebnis.",
@@ -19,7 +19,11 @@
     "wineCta": "Weine entdecken",
     "galleryHeading": "Atmosphäre",
     "galleryCta": "Galerie ansehen",
-    "reservationHeading": "Tisch reservieren"
+    "reservationHeading": "Tisch reservieren",
+    "introEyebrow": "Unser Restaurant",
+    "menuPreviewEyebrow": "Auswahl",
+    "wineEyebrow": "Premium-Auswahl",
+    "galleryEyebrow": "Atmosphäre"
   },
   "menu": {
     "heading": "Unsere Speisekarte",
@@ -43,7 +47,7 @@
     "phone": "Telefon",
     "email": "E-Mail",
     "hours": "Öffnungszeiten",
-    "hoursValue": "Montag–Samstag: 12:00–23:00\nSonntag: 12:00–22:00",
+    "hoursValue": "Täglich: 12:00–23:00",
     "formHeading": "Nachricht senden",
     "formName": "Name",
     "formEmail": "E-Mail",
@@ -65,9 +69,9 @@
     "errorMessage": "Ein Fehler ist aufgetreten. Bitte kontaktieren Sie uns direkt per Telefon."
   },
   "footer": {
-    "tagline": "Fine Dining im Herzen von Târgu Mureș",
-    "address": "Beispielstraße 1, Târgu Mureș",
-    "phone": "+40 265 000 000",
+    "tagline": "Fine Dining im Herzen von Satu Mare",
+    "address": "Strada 1 Decembrie 1918 5, Satu Mare",
+    "phone": "+40 361 415 162",
     "email": "contact@thedome.ro",
     "rights": "Alle Rechte vorbehalten",
     "developedBy": "Entwickelt von"

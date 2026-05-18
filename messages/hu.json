@@ -8,7 +8,7 @@
   },
   "home": {
     "heroTagline": "Kivételes gasztronómiai élmény",
-    "heroSubtitle": "Fine dining Marosvásárhely szívében",
+    "heroSubtitle": "Fine dining Szatmárnémeti szívében",
     "heroCta": "Asztalt foglalok",
     "introHeading": "Üdvözöljük a The Dome-ban",
     "introCopy": "A The Dome meghívja Önt a gasztronómiai finomság világába, ahol minden fogás egy műalkotás. Elegáns hangulatunk és kreatív konyhánk felejthetetlen élményt nyújt.",
@@ -19,7 +19,11 @@
     "wineCta": "Fedezze fel borainkat",
     "galleryHeading": "Hangulat",
     "galleryCta": "Galéria megtekintése",
-    "reservationHeading": "Asztalt foglalok"
+    "reservationHeading": "Asztalt foglalok",
+    "introEyebrow": "Éttermünk",
+    "menuPreviewEyebrow": "Válogatás",
+    "wineEyebrow": "Prémium válogatás",
+    "galleryEyebrow": "Hangulat"
   },
   "menu": {
     "heading": "Étlapunk",
@@ -43,7 +47,7 @@
     "phone": "Telefon",
     "email": "Email",
     "hours": "Nyitvatartás",
-    "hoursValue": "Hétfő–Szombat: 12:00–23:00\nVasárnap: 12:00–22:00",
+    "hoursValue": "Naponta: 12:00–23:00",
     "formHeading": "Üzenet küldése",
     "formName": "Név",
     "formEmail": "Email",
@@ -66,8 +70,8 @@
   },
   "footer": {
     "tagline": "Fine dining Marosvásárhely szívében",
-    "address": "Példa u. 1., Marosvásárhely",
-    "phone": "+40 265 000 000",
+    "address": "Strada 1 Decembrie 1918 5., Szatmárnémeti",
+    "phone": "+40 361 415 162",
     "email": "contact@thedome.ro",
     "rights": "Minden jog fenntartva",
     "developedBy": "Fejlesztette"

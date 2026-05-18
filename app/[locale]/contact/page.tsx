@@ -13,7 +13,7 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale, namespace: "contact" });
 	return {
 		title: t("heading"),
-		description: "Contactați restaurantul The Dome din Târgu Mureș",
+		description: "Contactați restaurantul The Dome din Satu Mare",
 	};
 }
 
@@ -26,8 +26,8 @@ export default async function ContactPage({
 	const t = await getTranslations({ locale, namespace: "contact" });
 
 	const contactItems = [
-		{ label: t("address"), value: "Str. Exemplu nr. 1\nTârgu Mureș, 540001" },
-		{ label: t("phone"), value: "+40 265 000 000" },
+		{ label: t("address"), value: "Strada 1 Decembrie 1918 nr. 5\nSatu Mare" },
+		{ label: t("phone"), value: "+40 361 415 162" },
 		{ label: t("email"), value: "contact@thedome.ro" },
 		{ label: t("hours"), value: t("hoursValue") },
 	];

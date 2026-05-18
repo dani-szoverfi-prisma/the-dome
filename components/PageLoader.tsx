@@ -32,7 +32,7 @@ export default function PageLoader() {
       aria-hidden="true"
       className={`page-loader${phase === "exiting" ? " page-loader--exit" : ""}`}
     >
-      <p className="page-loader__eyebrow">Fine Dining · Târgu Mureș</p>
+      <p className="page-loader__eyebrow">Fine Dining · Satu Mare</p>
       <div className="page-loader__title">The Dome</div>
       <div className="page-loader__line" />
     </div>
