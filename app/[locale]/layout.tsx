@@ -75,6 +75,14 @@ export default async function LocaleLayout({
       lang={locale}
       className={`${cormorant.variable} ${jost.variable} h-full antialiased`}
     >
+      <head>
+        {/* Swap favicon based on OS colour scheme — media attr on <link> is ignored by most browsers */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var mq=window.matchMedia('(prefers-color-scheme: dark)');function set(){var l=document.querySelector('link[rel*="icon"][type="image/svg+xml"]');if(l)l.href=mq.matches?'/favicon/favicon.svg':'/favicon/favicon-96x96.png';}set();mq.addEventListener('change',set);})();`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-[var(--bg-primary)] text-[var(--text-primary)]">
         <NextIntlClientProvider messages={messages}>
           <Navigation />
