@@ -125,7 +125,7 @@ export default async function ContactPage({
 									}}>
 									<iframe
 										title="The Dome — locație pe hartă"
-										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86936.43957905857!2d24.484285!3d46.5388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47491e306e2c4e4b%3A0x6464b4d9b84dc456!2sTârgu%20Mureș!5e0!3m2!1sen!2sro!4v1"
+										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42894.634167791555!2d22.801903140311275!3d47.78310328411924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473805cb7ddb378b%3A0x4c5103cdb02dec23!2sThe%20Dome!5e0!3m2!1sro!2sro!4v1779094302040!5m2!1sro!2sro"
 										width="100%"
 										height="100%"
 										style={{

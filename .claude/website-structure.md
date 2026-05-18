@@ -41,6 +41,6 @@ hreflang tags required on every page for all 4 locales
 
 ## SEO notes
 
-- Primary market: Târgu Mureș, Romania
+- Primary market: Satu Mare, Romania
 - Target keywords per page to be added as research is done
 - Schema.org type: Restaurant on homepage, with address and opening hours
