@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 
 const locales = [
@@ -45,18 +44,12 @@ export default function Navigation() {
 	}, [menuOpen]);
 
 	const navLinks = [
-		{ href: `/${locale}`, label: t("home") },
-		{ href: `/${locale}/menu`, label: t("menu") },
-		{ href: `/${locale}/gallery`, label: t("gallery") },
-		{ href: `/${locale}/contact`, label: t("contact") },
-		{ href: `/${locale}/reservation`, label: t("reservation") },
+		{ href: "/", label: t("home") },
+		{ href: "/menu", label: t("menu") },
+		{ href: "/gallery", label: t("gallery") },
+		{ href: "/contact", label: t("contact") },
+		{ href: "/reservation", label: t("reservation") },
 	];
-
-	const switchLocalePath = (newLocale: string) => {
-		const segments = pathname.split("/");
-		segments[1] = newLocale;
-		return segments.join("/") || "/";
-	};
 
 	return (
 		<>
@@ -115,7 +108,7 @@ export default function Navigation() {
 					{/* Center column — logo (desktop only) */}
 					{!isMobile && (
 						<Link
-							href={`/${locale}`}
+							href="/"
 							style={{
 								fontFamily: "var(--font-cormorant)",
 								fontSize: "1.75rem",
@@ -249,7 +242,8 @@ export default function Navigation() {
 					{locales.map(({ code, label }) => (
 						<Link
 							key={code}
-							href={switchLocalePath(code)}
+							href={pathname}
+							locale={code}
 							onClick={() => setMenuOpen(false)}
 							className="nav-link"
 							style={{

@@ -33,7 +33,9 @@
     "heading": "Fotogalerie",
     "interior": "Innenbereich",
     "terrace": "Terrasse",
-    "vinoteca": "Weinkeller"
+    "vinoteca": "Weinkeller",
+    "food": "Speisen",
+    "drink": "Getränke"
   },
   "contact": {
     "heading": "Kontakt",
@@ -67,6 +69,7 @@
     "address": "Beispielstraße 1, Târgu Mureș",
     "phone": "+40 265 000 000",
     "email": "contact@thedome.ro",
-    "rights": "Alle Rechte vorbehalten"
+    "rights": "Alle Rechte vorbehalten",
+    "developedBy": "Entwickelt von"
   }
 }

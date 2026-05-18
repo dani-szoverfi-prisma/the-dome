@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 
 export default function PageTransitionOverlay() {
   const overlayRef = useRef<HTMLDivElement>(null);

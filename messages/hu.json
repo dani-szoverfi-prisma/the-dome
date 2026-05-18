@@ -33,7 +33,9 @@
     "heading": "Fotógaléria",
     "interior": "Belső tér",
     "terrace": "Terasz",
-    "vinoteca": "Borkészlet"
+    "vinoteca": "Borkészlet",
+    "food": "Ételek",
+    "drink": "Italok"
   },
   "contact": {
     "heading": "Kapcsolat",
@@ -67,6 +69,7 @@
     "address": "Példa u. 1., Marosvásárhely",
     "phone": "+40 265 000 000",
     "email": "contact@thedome.ro",
-    "rights": "Minden jog fenntartva"
+    "rights": "Minden jog fenntartva",
+    "developedBy": "Fejlesztette"
   }
 }

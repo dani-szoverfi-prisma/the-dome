@@ -33,7 +33,9 @@
     "heading": "Galerie foto",
     "interior": "Interior",
     "terrace": "Terasă",
-    "vinoteca": "Vinotecă"
+    "vinoteca": "Vinotecă",
+    "food": "Mâncare",
+    "drink": "Băuturi"
   },
   "contact": {
     "heading": "Contact",
@@ -67,6 +69,7 @@
     "address": "Str. Exemplu nr. 1, Târgu Mureș",
     "phone": "+40 265 000 000",
     "email": "contact@thedome.ro",
-    "rights": "Toate drepturile rezervate"
+    "rights": "Toate drepturile rezervate",
+    "developedBy": "Dezvoltat de"
   }
 }

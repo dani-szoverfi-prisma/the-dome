@@ -46,11 +46,11 @@ const menuItems = [
 ];
 
 const galleryImages = [
-	{ src: "/images/2.webp", label: "Interior" },
-	{ src: "/images/3.webp", label: "Bucătărie" },
-	{ src: "/images/4.webp", label: "Terasă" },
-	{ src: "/images/5.webp", label: "Vinotecă" },
-	{ src: "/images/6.webp", label: "Detalii" },
+	{ src: "/images/food5.webp", label: "Interior" },
+	{ src: "/images/drink18.webp", label: "Bucătărie" },
+	{ src: "/images/food70.webp", label: "Terasă" },
+	{ src: "/images/drink10.webp", label: "Vinotecă" },
+	{ src: "/images/food62.webp", label: "Detalii" },
 ];
 
 export default async function HomePage({
@@ -95,7 +95,7 @@ export default async function HomePage({
 					aria-hidden
 					style={{
 						position: "absolute",
-						top: "8rem",
+						top: "6rem",
 						left: "50%",
 						transform: "translateX(-50%)",
 						width: "1px",
@@ -127,7 +127,7 @@ export default async function HomePage({
 						}}>
 						Fine Dining · Târgu Mureș
 					</p>
-					<h1
+					{/* <h1
 						style={{
 							fontFamily: "var(--font-cormorant)",
 							fontSize: "clamp(3rem, 8vw, 6.5rem)",
@@ -137,9 +137,14 @@ export default async function HomePage({
 							marginBottom: "1rem",
 							lineHeight: 1,
 							color: "#ffffff",
-						}}>
-						The Dome
-					</h1>
+						}}></h1> */}
+					<Image
+						src="/logo/4.webp"
+						alt="The Dome"
+						width={200}
+						height={60}
+						style={{ margin: "10px 0" }}
+					/>
 					<p
 						style={{
 							fontSize: "clamp(1rem, 2vw, 1.25rem)",
@@ -151,7 +156,7 @@ export default async function HomePage({
 						}}>
 						{t("heroTagline")}
 					</p>
-					<Button href={`/${locale}/reservation`} variant="gold">
+					<Button href={`/reservation`} variant="gold">
 						{t("heroCta")}
 					</Button>
 				</div>
@@ -216,7 +221,7 @@ export default async function HomePage({
 								}}>
 								{t("introCopy")}
 							</p>
-							<Button href={`/${locale}/menu`} variant="gold">
+							<Button href={`/menu`} variant="gold">
 								{t("menuPreviewCta")}
 							</Button>
 						</ScrollReveal>
@@ -230,7 +235,7 @@ export default async function HomePage({
 									overflow: "hidden",
 								}}>
 								<Image
-									src="/images/1.webp"
+									src="/images/food63.webp"
 									alt="Interior restaurant The Dome"
 									fill
 									style={{ objectFit: "cover" }}
@@ -333,7 +338,7 @@ export default async function HomePage({
 
 					<ScrollReveal delay={300}>
 						<div style={{ textAlign: "center", marginTop: "3rem" }}>
-							<Button href={`/${locale}/menu`} variant="gold">
+							<Button href={`/menu`} variant="gold">
 								{t("menuPreviewCta")}
 							</Button>
 						</div>
@@ -352,7 +357,7 @@ export default async function HomePage({
 				}}>
 				{/* Full-bleed background image */}
 				<Image
-					src="/images/1.webp"
+					src="/images/vinoteca80.webp"
 					alt=""
 					aria-hidden
 					fill
@@ -401,7 +406,7 @@ export default async function HomePage({
 							}}>
 							{t("wineCopy")}
 						</p>
-						<Button href={`/${locale}/menu?tab=wine`} variant="gold">
+						<Button href={`/menu?tab=wine`} variant="gold">
 							{t("wineCta")}
 						</Button>
 					</ScrollReveal>
